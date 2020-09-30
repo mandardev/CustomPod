@@ -113,7 +113,7 @@ open class OUVideoCallController: UIViewController {
         self.init(apiKey: nil, sessionId: nil, token: nil)
     }
 
-    open init(apiKey: String?, sessionId: String?, token: String?) {
+    public init(apiKey: String?, sessionId: String?, token: String?) {
         self.apiKey = apiKey
         self.sessionId = sessionId
         self.token = token
