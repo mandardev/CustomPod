@@ -24,6 +24,6 @@ class ScreenShotButton: UIButton {
     }
 
     func setup() {
-        self.setImage(ImageConstants.screenShot.getUIImage(), for: .normal)
+        self.setImage(ImageConstants.screenShot1, for: .normal)
     }
 }
