@@ -24,7 +24,10 @@ enum ImageConstants: String {
 extension ImageConstants {
     func getUIImage() -> UIImage {
 //        UIImage(named: self.rawValue, in:Bundle(identifier: "org.cocoapods.CustomPod"), compatibleWith: nil) ?? UIImage()
-        UIImage.init(named: self.rawValue) ?? UIImage()
+//        UIImage.init(named: self.rawValue) ?? UIImage()
+        
+        let bundle = Bundle(for: VideoCallController.self)
+        return UIImage(named: self.rawValue, in: bundle, compatibleWith: nil)!
 
     }
 }
