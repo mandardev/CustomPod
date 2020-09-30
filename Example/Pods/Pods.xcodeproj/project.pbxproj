@@ -37,7 +37,7 @@
 		9B3B119A2524421F0031DFA8 /* CallEndButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11832524421F0031DFA8 /* CallEndButton.swift */; };
 		9B3B119B2524421F0031DFA8 /* MicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11842524421F0031DFA8 /* MicButton.swift */; };
 		9B3B119C2524421F0031DFA8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11852524421F0031DFA8 /* Device.swift */; };
-		9B3B11E025245C700031DFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B11DF25245C6F0031DFA8 /* Assets.xcassets */; };
+		9B3B11E7252469910031DFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3B11E6252469910031DFA8 /* Assets.xcassets */; };
 		C30EC34BDFA31AF58967937B6D894A20 /* Pods-CustomPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9088D5601B4F395843D61D9C5862DB /* Pods-CustomPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCA5D4449A709912571256B7C20C3DDD /* CustomPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDBFCEA5646FD996BF419D9C7E34B0 /* CustomPod-dummy.m */; };
 		D736B2FF4CCDCAFA98A49A91D3D25B03 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139064A1C8A041D61F461124BF2E6F25 /* ReplaceMe.swift */; };
@@ -106,7 +106,7 @@
 		9B3B11832524421F0031DFA8 /* CallEndButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallEndButton.swift; path = CustomPod/Classes/CallEndButton.swift; sourceTree = "<group>"; };
 		9B3B11842524421F0031DFA8 /* MicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MicButton.swift; path = CustomPod/Classes/MicButton.swift; sourceTree = "<group>"; };
 		9B3B11852524421F0031DFA8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = CustomPod/Classes/Device.swift; sourceTree = "<group>"; };
-		9B3B11DF25245C6F0031DFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CustomPod/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		9B3B11E6252469910031DFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CustomPod/Classes/Assets.xcassets; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F3BC122266B88FAB32F9446719FE5AD /* Pods-CustomPod_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomPod_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A38342A22C89E6E5C6457A54EDC08E6E /* Pods-CustomPod_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomPod_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		428F13E7DF4C371ED67F34680622D7FB /* CustomPod */ = {
 			isa = PBXGroup;
 			children = (
-				9B3B11DF25245C6F0031DFA8 /* Assets.xcassets */,
+				9B3B11E6252469910031DFA8 /* Assets.xcassets */,
 				139064A1C8A041D61F461124BF2E6F25 /* ReplaceMe.swift */,
 				9B3B116F2524421D0031DFA8 /* ApiClient.swift */,
 				9B3B117E2524421E0031DFA8 /* ApiError.swift */,
@@ -432,7 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B3B11E025245C700031DFA8 /* Assets.xcassets in Resources */,
+				9B3B11E7252469910031DFA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
