@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CallEndButton: UIButton {
+public class CallEndButton: UIButton {
     
     override init(frame: CGRect){
         super.init(frame: frame)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraSwapButton: UIButton {
+public class CameraSwapButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)

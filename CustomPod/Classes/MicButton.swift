@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MicButton: UIButton {
+public class MicButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)

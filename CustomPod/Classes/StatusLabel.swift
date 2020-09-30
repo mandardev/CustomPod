@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatusLabel: UILabel {
+public class StatusLabel: UILabel {
 
     override init(frame: CGRect){
         super.init(frame: frame)

@@ -8,14 +8,7 @@
 
 import UIKit
 
-class VideoButton: UIButton {
-
-//    @IBInspectable var titleText: String? {
-//        didSet {
-//            self.setTitle(titleText, for: .normal)
-//            self.setTitleColor(UIColor.black,for: .normal)
-//        }
-//    }
+public class VideoButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
