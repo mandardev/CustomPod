@@ -26,9 +26,7 @@ Pod::Spec.new do |s|
     s.dependency 'ObjectMapper', '~> 4.2.0'
     
     s.resource_bundles = {
-        'CustomPod' => ['CustomPod/Assets/*.xcassets']
+        'CustomPod' => ['CustomPod/Assets/*']
     }
-    
-    s.resources = "CustomPod/Assets/**/*.{png,json}"
-    
+        
 end
