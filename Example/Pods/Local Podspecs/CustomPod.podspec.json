@@ -1,0 +1,22 @@
+{
+  "name": "CustomPod",
+  "version": "0.1.0",
+  "summary": "A custompod for checking the working for cocoapods.",
+  "description": "'A custompod for checking the working for cocoapods by creating demo pod'",
+  "homepage": "https://github.com/mandardev/CustomPod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mandar.developer7@gmail.com": "mandar.developer7@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/mandardev/CustomPod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CustomPod/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - CustomPod (0.1.0)
+
+DEPENDENCIES:
+  - CustomPod (from `../`)
+
+EXTERNAL SOURCES:
+  CustomPod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CustomPod: 6739525fd301536b57fefefc4d047c13623aaf27
+
+PODFILE CHECKSUM: a653ffbcf1437bd3fc3d01a116ca075202d5763d
+
+COCOAPODS: 1.9.3
