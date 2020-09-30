@@ -32,6 +32,13 @@ Pod::Spec.new do |s|
 
   s.source_files = 'CustomPod/Classes/**/*'
   
+  s.dependency 'OpenTok'
+  s.dependency 'Alamofire', '~> 5.2' #, :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
+  s.dependency 'RxSwift', '~> 5.1.1'
+  s.dependency 'RxCocoa', '~> 5.1.1'
+  s.dependency 'RxRelay', '~> 5.1.1'
+  s.dependency 'ObjectMapper', '~> 4.2.0'
+  
   # s.resource_bundles = {
   #   'CustomPod' => ['CustomPod/Assets/*.png']
   # }
