@@ -23,10 +23,6 @@ enum ImageConstants: String {
 
 extension ImageConstants {
     func getUIImage() -> UIImage {
-//        UIImage.init(named: self.rawValue) ?? UIImage()
-//
-//
-//        return UIImage(named:"IMG_0745", bundle:Bundle(for: self), compatibleWith:nil)
         UIImage(named: self.rawValue, in:Bundle(identifier: "org.cocoapods.CustomPod"), compatibleWith: nil) ?? UIImage()
     }
 }

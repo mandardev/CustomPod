@@ -41,9 +41,9 @@ Pod::Spec.new do |s|
   s.dependency 'RxRelay', '~> 5.1.1'
   s.dependency 'ObjectMapper', '~> 4.2.0'
   
-  # s.resource_bundles = {
-  #   'CustomPod' => ['CustomPod/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'CustomPod' => ['CustomPod/Assets/*.xcassets']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
