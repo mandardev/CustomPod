@@ -29,4 +29,6 @@ Pod::Spec.new do |s|
         'CustomPod' => ['CustomPod/Assets/*.xcassets']
     }
     
+    s.resources = "CustomPod/**/*.{png,json}"
+    
 end
