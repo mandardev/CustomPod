@@ -35,7 +35,7 @@
 		9B3B119A2524421F0031DFA8 /* CallEndButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11832524421F0031DFA8 /* CallEndButton.swift */; };
 		9B3B119B2524421F0031DFA8 /* MicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11842524421F0031DFA8 /* MicButton.swift */; };
 		9B3B119C2524421F0031DFA8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11852524421F0031DFA8 /* Device.swift */; };
-		9B6B929F2524731B00A51187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B929E2524731B00A51187 /* Assets.xcassets */; };
+		9B6B929F2524731B00A51187 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B929E2524731B00A51187 /* Images.xcassets */; };
 		9B6B92A925247FE800A51187 /* screenshot_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B92A825247FE700A51187 /* screenshot_icon.png */; };
 		C30EC34BDFA31AF58967937B6D894A20 /* Pods-CustomPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9088D5601B4F395843D61D9C5862DB /* Pods-CustomPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCA5D4449A709912571256B7C20C3DDD /* CustomPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDBFCEA5646FD996BF419D9C7E34B0 /* CustomPod-dummy.m */; };
@@ -103,7 +103,7 @@
 		9B3B11832524421F0031DFA8 /* CallEndButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CallEndButton.swift; path = CustomPod/Classes/CallEndButton.swift; sourceTree = "<group>"; };
 		9B3B11842524421F0031DFA8 /* MicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MicButton.swift; path = CustomPod/Classes/MicButton.swift; sourceTree = "<group>"; };
 		9B3B11852524421F0031DFA8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = CustomPod/Classes/Device.swift; sourceTree = "<group>"; };
-		9B6B929E2524731B00A51187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CustomPod/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		9B6B929E2524731B00A51187 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CustomPod/Assets/Images.xcassets; sourceTree = "<group>"; };
 		9B6B92A825247FE700A51187 /* screenshot_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshot_icon.png; path = CustomPod/Classes/screenshot_icon.png; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F3BC122266B88FAB32F9446719FE5AD /* Pods-CustomPod_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomPod_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 				9B3B11752524421D0031DFA8 /* VideoCallInitiateModel.swift */,
 				9B6B92A825247FE700A51187 /* screenshot_icon.png */,
 				9B3B117B2524421E0031DFA8 /* VideoCallInitiateRequest.swift */,
-				9B6B929E2524731B00A51187 /* Assets.xcassets */,
+				9B6B929E2524731B00A51187 /* Images.xcassets */,
 				A0DF8A3D31729D76683F21D789C8BF55 /* Pod */,
 				2BBD9907ADAE33246EA53247189DFF41 /* Support Files */,
 				9B3B116D25243FFB0031DFA8 /* DemoViewController.swift */,
@@ -412,7 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6B92A925247FE800A51187 /* screenshot_icon.png in Resources */,
-				9B6B929F2524731B00A51187 /* Assets.xcassets in Resources */,
+				9B6B929F2524731B00A51187 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
