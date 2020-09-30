@@ -18,7 +18,7 @@ enum ImageConstants: String {
     case micMuted = "mic_muted"
     case decline = "decline"
     case docIcon = "doc_icon"
-    case screenShot = "screenshot_icon"
+    case screenShot = "screenshot_icon.png"
 }
 
 extension ImageConstants {
