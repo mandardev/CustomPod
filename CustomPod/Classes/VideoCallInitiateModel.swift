@@ -42,7 +42,7 @@ struct VideoCallInitiateResponse: Mappable {
         
     }
     
-    mutating open func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         print(map.JSON)
         id <- map["id"]
         sex <- map["sex"]

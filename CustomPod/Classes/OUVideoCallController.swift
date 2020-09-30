@@ -19,7 +19,7 @@ open class OUVideoCallController: UIViewController {
     
     var collectionView: UICollectionView!
     
-    open let topStackView: UIStackView = {
+    public let topStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.distribution = .fillEqually
@@ -28,7 +28,7 @@ open class OUVideoCallController: UIViewController {
         return stack
     }()
     
-    open let userNameLabel: UILabel = {
+    public let userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = UIDevice.current.name
@@ -36,7 +36,7 @@ open class OUVideoCallController: UIViewController {
         return label
     }()
     
-    open let timeLabel: UILabel = {
+    public let timeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "00:00:00"
@@ -44,13 +44,13 @@ open class OUVideoCallController: UIViewController {
         return label
     }()
     
-    open let statusLabel: StatusLabel = {
+    public let statusLabel: StatusLabel = {
         let label = StatusLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    open let bottomStackView: UIStackView = {
+    public let bottomStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .fillEqually
@@ -58,7 +58,7 @@ open class OUVideoCallController: UIViewController {
         return stack
     }()
     
-    open let micButton: MicButton = {
+    public let micButton: MicButton = {
         let button = MicButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(OUImageConstants.micUnmuted.getUIImage(), for: .normal)
@@ -66,31 +66,31 @@ open class OUVideoCallController: UIViewController {
         return button
     }()
     
-    open let videoButton: VideoButton = {
+    public let videoButton: VideoButton = {
         let button = VideoButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    open let screenShotButton: ScreenShotButton = {
+    public let screenShotButton: ScreenShotButton = {
         let button = ScreenShotButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    open let cameraButton: CameraSwapButton = {
+    public let cameraButton: CameraSwapButton = {
         let button = CameraSwapButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    open let endCallButton: CallEndButton = {
+    public let endCallButton: CallEndButton = {
         let button = CallEndButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    open let docButton: DocButton = {
+    public let docButton: DocButton = {
         let button = DocButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -98,12 +98,12 @@ open class OUVideoCallController: UIViewController {
     
     let cellId = "subscriberCell"
 
-    open var subscribers: [IndexPath: OTSubscriber] = [:]
-    open var error: OTError?
+    public var subscribers: [IndexPath: OTSubscriber] = [:]
+    public var error: OTError?
 
-    open var session: OTSession?
+    public var session: OTSession?
     
-    open lazy var publisher: OTPublisher? = {
+    public lazy var publisher: OTPublisher? = {
         let settings = OTPublisherSettings()
         settings.name = UIDevice.current.name
         return OTPublisher(delegate: self, settings: settings)
@@ -120,7 +120,7 @@ open class OUVideoCallController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
