@@ -24,10 +24,10 @@ Pod::Spec.new do |s|
     s.dependency 'RxCocoa', '~> 5.1.1'
     s.dependency 'RxRelay', '~> 5.1.1'
     s.dependency 'ObjectMapper', '~> 4.2.0'
-    
-    s.resource_bundles = {
-        'CustomPod' => ['CustomPod/Assets/*']
-    }
+#    
+#    s.resource_bundles = {
+#        'CustomPod' => ['CustomPod/Assets/*']
+#    }
     s.resources = "CustomPod/Assets/*.xcassets"
 
 end
