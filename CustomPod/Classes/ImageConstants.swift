@@ -18,13 +18,20 @@ enum ImageConstants: String {
     case micMuted = "mic_muted"
     case decline = "decline"
     case docIcon = "doc_icon"
-    case screenShot = "screenshot_icon"
+    case screenShot = "screenshot_icon.png"
 }
 
 extension ImageConstants {
     
     func getUIImage() -> UIImage {
-        UIImage.init(named: self.rawValue) ?? UIImage()
+//        UIImage.init(named: self.rawValue) ?? UIImage()
+        let bundle = Bundle(for: VideoCallController.self)
+        return UIImage(named: self.rawValue, in: bundle, compatibleWith: nil) ?? UIImage()
     }
+    
 }
+
+
+
+
 
