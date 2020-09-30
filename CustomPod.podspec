@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   s.dependency 'ObjectMapper', '~> 4.2.0'
   
    s.resource_bundles = {
-     'CustomPod' => ['CustomPod/Classes/**/*.xcassets']
+     'CustomPod' => ['CustomPod/Assets/*.xcassets']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
