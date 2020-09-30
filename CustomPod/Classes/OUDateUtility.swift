@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DateUtility {
+struct OUDateUtility {
     static func getTimeZoneOffset() -> Int {
         let sourceDate = Date()
         let destinationTimeZone = NSTimeZone.system

@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 import ObjectMapper
 
-class ApiClient {
+class OUApiClient {
 
     //-------------------------------------------------------------------------------------------------
     // MARK: - The request function to get results in an Observable
@@ -55,7 +55,7 @@ class ApiClient {
 }
 
 // MARK: - Login APIs
-extension ApiClient {
+extension OUApiClient {
 
     static func videoCallInitiate(videoCallRequest: VideoCallInitiateRequest) -> Observable<VideoCallInitiateModel> {
         return request(ApiRouter.videoCallInitiate(videoCallRequest))

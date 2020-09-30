@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-enum ApiRouter: URLRequestConvertible {
+enum OUApiRouter: URLRequestConvertible {
     
     case videoCallInitiate(VideoCallInitiateRequest)
     case videoCallEnd(VideoCallEndRequest)
@@ -66,10 +66,10 @@ enum ApiRouter: URLRequestConvertible {
 }
 
 // MARK: - URL Request
-extension ApiRouter {
+extension OUApiRouter {
     func asURLRequest() throws -> URLRequest {
 
-        let url = try NetworkConstants.baseUrl.asURL()
+        let url = try OUNetworkConstants.baseUrl.asURL()
 
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
 
@@ -87,12 +87,12 @@ extension ApiRouter {
 }
 
 // MARK: - HTTP Headers
-extension ApiRouter {
+extension OUApiRouter {
     private func getHttpHeaders() -> HTTPHeaders {
         let acceptLanguage = "en"
-        let appVersion = "\(InfoPlist.getValue(for: .shortVersion) ?? "")\(InfoPlist.getValue(for: .version) ?? "")"
+        let appVersion = "\(OUInfoPlist.getValue(for: .shortVersion) ?? "")\(OUInfoPlist.getValue(for: .version) ?? "")"
         let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? ""
-        let deviceType = Device.deviceInterfaceType.rawValue
+        let deviceType = OUDevice.deviceInterfaceType.rawValue
         // TODO: - Append authId to authorization when login flow implemented.
 //        let authorization = "Bearer " + (ShareUtility.instance.authId ?? "")
         let authorization = "Bearer"

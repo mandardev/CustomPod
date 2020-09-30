@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ApiError: Error {
+enum OUApiError: Error {
     case forbidden              //Status code 403
     case notFound               //Status code 404
     case conflict               //Status code 409

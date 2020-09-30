@@ -24,6 +24,6 @@ public class CallEndButton: UIButton {
     }
 
     public func setup() {
-        self.setImage(ImageConstants.decline.getUIImage(), for: .normal)
+        self.setImage(OUImageConstants.decline.getUIImage(), for: .normal)
     }
 }

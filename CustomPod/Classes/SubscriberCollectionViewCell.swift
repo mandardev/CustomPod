@@ -54,9 +54,9 @@ class SubscriberCollectionViewCell: UICollectionViewCell {
         subscriber?.subscribeToAudio = !(subscriber?.subscribeToAudio ?? true)
         let buttonImage: UIImage  = {
             if !(subscriber?.subscribeToAudio ?? true) {
-                return ImageConstants.micUnmuted.getUIImage()
+                return OUImageConstants.micUnmuted.getUIImage()
             } else {
-                return ImageConstants.micMuted.getUIImage()
+                return OUImageConstants.micMuted.getUIImage()
             }
         }()
         muteButton.setImage(buttonImage, for: .normal)

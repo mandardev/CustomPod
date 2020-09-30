@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct InfoPlist {
+struct OUInfoPlist {
     static let infoPlistDictionary = Bundle.main.infoDictionary
     
     enum InfoPlistKey: String {

@@ -24,7 +24,7 @@ public class DocButton: UIButton {
     }
 
     public func setup() {
-        self.setImage(ImageConstants.docIcon.getUIImage(), for: .normal)
+        self.setImage(OUImageConstants.docIcon.getUIImage(), for: .normal)
         self.isHidden = true
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NetworkConstants {
+struct OUNetworkConstants {
 
     // All API's base URL
     #if PROD

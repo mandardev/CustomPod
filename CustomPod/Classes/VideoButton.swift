@@ -24,7 +24,7 @@ public class VideoButton: UIButton {
     }
 
     public func setup() {
-        self.setImage(ImageConstants.videoUnmuted.getUIImage(), for: .normal)
-        self.setImage(ImageConstants.videoMuted.getUIImage(), for: .selected)
+        self.setImage(OUImageConstants.videoUnmuted.getUIImage(), for: .normal)
+        self.setImage(OUImageConstants.videoMuted.getUIImage(), for: .selected)
     }
 }

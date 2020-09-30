@@ -24,7 +24,7 @@ public class CameraSwapButton: UIButton {
     }
 
     public func setup() {
-        self.setImage(ImageConstants.cameraFront.getUIImage(), for: .normal)
-        self.setImage(ImageConstants.cameraBack.getUIImage(), for: .selected)
+        self.setImage(OUImageConstants.cameraFront.getUIImage(), for: .normal)
+        self.setImage(OUImageConstants.cameraBack.getUIImage(), for: .selected)
     }
 }

@@ -25,7 +25,7 @@ public class MicButton: UIButton {
     }
 
     public func setup() {
-        self.setImage(ImageConstants.micUnmuted.getUIImage(), for: .normal)
-        self.setImage(ImageConstants.micMuted.getUIImage(), for: .selected)
+        self.setImage(OUImageConstants.micUnmuted.getUIImage(), for: .normal)
+        self.setImage(OUImageConstants.micMuted.getUIImage(), for: .selected)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum ImageConstants: String {
+enum OUImageConstants: String {
     case cameraFront = "camera_front"
     case cameraBack = "camera_back"
     case videoUnmuted = "video_unmuted"
@@ -21,11 +21,11 @@ enum ImageConstants: String {
     case screenShot = "screenshot_icon"
 }
 
-extension ImageConstants {
+extension OUImageConstants {
     
     func getUIImage() -> UIImage {
         
-        let bundle = Bundle(for: VideoCallController.self)
+        let bundle = Bundle(for: OUVideoCallController.self)
         let bundleURL = bundle.resourceURL?.appendingPathComponent("CustomPod.bundle")
         let resourceBundle = Bundle(url: bundleURL!)
         return UIImage(named: self.rawValue, in: resourceBundle, compatibleWith: nil) ?? UIImage()

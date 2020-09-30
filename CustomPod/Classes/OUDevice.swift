@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // MARK: - Device Structure
-struct Device {
+struct OUDevice {
     // MARK: - International Checks
     static var CurrentRegion: String {
         return ((Locale.current as NSLocale).object(forKey: .countryCode) as? String)!

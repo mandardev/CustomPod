@@ -11,7 +11,7 @@ import OpenTok
 
 let actionViewHeight: CGFloat = 80
 
-public class VideoCallController: UIViewController {
+public class OUVideoCallController: UIViewController {
     
     var apiKey: String?
     var sessionId: String?
@@ -61,8 +61,8 @@ public class VideoCallController: UIViewController {
     public let micButton: MicButton = {
         let button = MicButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(ImageConstants.micUnmuted.getUIImage(), for: .normal)
-        button.setImage(ImageConstants.micMuted.getUIImage(), for: .selected)
+        button.setImage(OUImageConstants.micUnmuted.getUIImage(), for: .normal)
+        button.setImage(OUImageConstants.micMuted.getUIImage(), for: .selected)
         return button
     }()
     
@@ -307,7 +307,7 @@ public class VideoCallController: UIViewController {
     /* call this API when call is initiated by doctor */
     private func callVideoCallInitiateApi() {
                         
-        _ = ApiClient.videoCallInitiate(videoCallRequest: VideoCallInitiateRequest(appointmentId: "", requestInitiatedBy: "")).subscribe(onNext: { (response) in
+        _ = OUApiClient.videoCallInitiate(videoCallRequest: VideoCallInitiateRequest(appointmentId: "", requestInitiatedBy: "")).subscribe(onNext: { (response) in
             guard response.code == 200, let data = response.data else {
                 return
             }
@@ -321,7 +321,7 @@ public class VideoCallController: UIViewController {
     /* call this API when video call cancel from doctor */
     private func callVideoCallCancelApi() {
         
-        _ = ApiClient.videoCallCancel(videoCallCancelRequest: VideoCallCancelRequest(appointmentId: "")).subscribe(onNext: { (response) in
+        _ = OUApiClient.videoCallCancel(videoCallCancelRequest: VideoCallCancelRequest(appointmentId: "")).subscribe(onNext: { (response) in
             guard response.code == 200, let data = response.data else {
                 return
             }
@@ -335,7 +335,7 @@ public class VideoCallController: UIViewController {
     /* call this API when call is end from doctor or patient */
     private func callEndCallApi() {
         
-        _ = ApiClient.videoCallEnd(videoCallEndRequest: VideoCallEndRequest(appointmentId: "", endedBy: "")).subscribe(onNext: { (response) in
+        _ = OUApiClient.videoCallEnd(videoCallEndRequest: VideoCallEndRequest(appointmentId: "", endedBy: "")).subscribe(onNext: { (response) in
             guard response.code == 200, let data = response.data else {
                 return
             }
@@ -348,7 +348,7 @@ public class VideoCallController: UIViewController {
 }
 
 // MARK: - OpenTok Methods
-extension VideoCallController {
+extension OUVideoCallController {
     
     func doPublish() {
         
@@ -411,7 +411,7 @@ extension VideoCallController {
     }
 }
 
-extension VideoCallController: UICollectionViewDataSource {
+extension OUVideoCallController: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return subscribers.count
@@ -424,12 +424,12 @@ extension VideoCallController: UICollectionViewDataSource {
     }
 }
 
-extension VideoCallController: UICollectionViewDelegate {
+extension OUVideoCallController: UICollectionViewDelegate {
 }
 
 // MARK: - OTSession delegate callbacks
 
-extension VideoCallController: OTSessionDelegate {
+extension OUVideoCallController: OTSessionDelegate {
     
     public func sessionDidConnect(_ session: OTSession) {
         print("Session connected")
@@ -471,7 +471,7 @@ extension VideoCallController: OTSessionDelegate {
 
 // MARK: - OTPublisher delegate callbacks
 
-extension VideoCallController: OTPublisherDelegate {
+extension OUVideoCallController: OTPublisherDelegate {
     
     public func publisher(_ publisher: OTPublisherKit, streamCreated stream: OTStream) {
     }
@@ -486,7 +486,7 @@ extension VideoCallController: OTPublisherDelegate {
 
 // MARK: - OTSubscriber delegate callbacks
 
-extension VideoCallController: OTSubscriberDelegate {
+extension OUVideoCallController: OTSubscriberDelegate {
     
     public func subscriberDidConnect(toStream subscriberKit: OTSubscriberKit) {
         print("Subscriber connected")
