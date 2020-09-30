@@ -28,5 +28,8 @@ Pod::Spec.new do |s|
     s.resource_bundles = {
         'CustomPod' => ['CustomPod/Assets/*']
     }
+    
+    s.resources = "CustomPod/**/*.{png,json}"
+
         
 end
