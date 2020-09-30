@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EAB401623386AE40FDF718614150088 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		448BEAE4B320314B215DA8B89215216B /* Pods-CustomPod_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED7975477F6C53F6E1BFA13039CCC1 /* Pods-CustomPod_Example-dummy.m */; };
 		4EDF64B877A3F9CF505D0BAB33927A6A /* Pods-CustomPod_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9205AA52A58BF970A5189CDB7508B040 /* Pods-CustomPod_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51DC951EEC938651F3AEC00423275A15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		7A7F9B506AAE1C6B1DEDA91EC1F45089 /* Pods-CustomPod_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D9ACF29374BBEB1503CC952C4E7AB /* Pods-CustomPod_Tests-dummy.m */; };
 		801BA7C9CA59348A1650A5AAA5448924 /* CustomPod-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E445BCDE19AD4872386EA52565E1F06B /* CustomPod-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B3B116E25243FFB0031DFA8 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B116D25243FFB0031DFA8 /* DemoViewController.swift */; };
@@ -38,11 +36,9 @@
 		9B3B119B2524421F0031DFA8 /* MicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11842524421F0031DFA8 /* MicButton.swift */; };
 		9B3B119C2524421F0031DFA8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3B11852524421F0031DFA8 /* Device.swift */; };
 		9B6B929F2524731B00A51187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B929E2524731B00A51187 /* Assets.xcassets */; };
-		9B6B92A3252473A000A51187 /* CustomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6B92A2252473A000A51187 /* CustomAssets.xcassets */; };
 		C30EC34BDFA31AF58967937B6D894A20 /* Pods-CustomPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C9088D5601B4F395843D61D9C5862DB /* Pods-CustomPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCA5D4449A709912571256B7C20C3DDD /* CustomPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDDBFCEA5646FD996BF419D9C7E34B0 /* CustomPod-dummy.m */; };
 		D736B2FF4CCDCAFA98A49A91D3D25B03 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139064A1C8A041D61F461124BF2E6F25 /* ReplaceMe.swift */; };
-		DC0CBDC860777749A1C294DD4AB4BFB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +67,6 @@
 		1D9D9ACF29374BBEB1503CC952C4E7AB /* Pods-CustomPod_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomPod_Tests-dummy.m"; sourceTree = "<group>"; };
 		1DDDBFCEA5646FD996BF419D9C7E34B0 /* CustomPod-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomPod-dummy.m"; sourceTree = "<group>"; };
 		2AA79EB8AB069EB3B1DA0C375F20A787 /* CustomPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CustomPod.debug.xcconfig; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F3E0CC395FB4298C3647E7F52E94429 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		483AA980F6C27B19250579B9C6822AF8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		49E70CCC77469B68DC26D7DFAE7ADBE9 /* Pods-CustomPod_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomPod_Example-Info.plist"; sourceTree = "<group>"; };
@@ -108,7 +103,6 @@
 		9B3B11842524421F0031DFA8 /* MicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MicButton.swift; path = CustomPod/Classes/MicButton.swift; sourceTree = "<group>"; };
 		9B3B11852524421F0031DFA8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = CustomPod/Classes/Device.swift; sourceTree = "<group>"; };
 		9B6B929E2524731B00A51187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CustomPod/Assets/Assets.xcassets; sourceTree = "<group>"; };
-		9B6B92A2252473A000A51187 /* CustomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CustomAssets.xcassets; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F3BC122266B88FAB32F9446719FE5AD /* Pods-CustomPod_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomPod_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A38342A22C89E6E5C6457A54EDC08E6E /* Pods-CustomPod_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomPod_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -129,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAB401623386AE40FDF718614150088 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC0CBDC860777749A1C294DD4AB4BFB4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DC951EEC938651F3AEC00423275A15 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +198,6 @@
 				A0DF8A3D31729D76683F21D789C8BF55 /* Pod */,
 				2BBD9907ADAE33246EA53247189DFF41 /* Support Files */,
 				9B3B116D25243FFB0031DFA8 /* DemoViewController.swift */,
-				9B6B92A2252473A000A51187 /* CustomAssets.xcassets */,
 			);
 			name = CustomPod;
 			path = ../..;
@@ -249,31 +239,14 @@
 			path = "Target Support Files/Pods-CustomPod_Tests";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E15F5D813F01918C0B1DE31DCA28B355 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				ACE72197BB8A51C653A0C5743BBAD52C /* Products */,
 				398CA3D2A394A90A9C25EB4911F32D28 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DD2736B9266429E6D5BE5F04DC431BD8 /* Pods-CustomPod_Example */ = {
@@ -436,7 +409,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6B929F2524731B00A51187 /* Assets.xcassets in Resources */,
-				9B6B92A3252473A000A51187 /* CustomAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
