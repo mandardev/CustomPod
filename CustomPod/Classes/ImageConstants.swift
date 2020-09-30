@@ -23,55 +23,8 @@ enum ImageConstants: String {
 
 extension ImageConstants {
     
-    public static var cameraFront1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "camera_front", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var videoUnmuted1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "video_unmuted", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var cameraBack1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "camera_back", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var videoMuted1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "video_muted", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var micUnmuted1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "mic_unmuted", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var micMuted1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "mic_muted", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var decline1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "decline", in: bundle, compatibleWith: nil)!
-    }
-    
-    public static var screenShot1: UIImage {
-        let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: "screenshot_icon", in: bundle, compatibleWith: nil)!
-    }
-    
     func getUIImage() -> UIImage {
-//        UIImage.init(named: self.rawValue) ?? UIImage()
-//
-//
-//        return UIImage(named:"IMG_0745", bundle:Bundle(for: self), compatibleWith:nil)
-        UIImage(named: self.rawValue, in:Bundle(identifier: "com.mandar.custompod.CustomPod"), compatibleWith: nil) ?? UIImage()
-
-//        let bundle = Bundle(for: VideoCallController.self)
-//        return UIImage(named: self.rawValue, in: bundle, compatibleWith: nil)!
+        UIImage.init(named: self.rawValue) ?? UIImage()
     }
 }
 
