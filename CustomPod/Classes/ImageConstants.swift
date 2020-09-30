@@ -27,6 +27,6 @@ extension ImageConstants {
 //
 //
 //        return UIImage(named:"IMG_0745", bundle:Bundle(for: self), compatibleWith:nil)
-        UIImage(named: self.rawValue, in:Bundle(identifier: "com.mandar.custompod.CustomPod"), compatibleWith: nil) ?? UIImage()
+        UIImage(named: self.rawValue, in:Bundle(identifier: "org.cocoapods.CustomPod"), compatibleWith: nil) ?? UIImage()
     }
 }
