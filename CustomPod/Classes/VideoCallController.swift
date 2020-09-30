@@ -19,7 +19,7 @@ public class VideoCallController: UIViewController {
     
     var collectionView: UICollectionView!
     
-    let topStackView: UIStackView = {
+    public let topStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.distribution = .fillEqually
@@ -28,7 +28,7 @@ public class VideoCallController: UIViewController {
         return stack
     }()
     
-    let userNameLabel: UILabel = {
+    public let userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = UIDevice.current.name
@@ -36,7 +36,7 @@ public class VideoCallController: UIViewController {
         return label
     }()
     
-    let timeLabel: UILabel = {
+    public let timeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "00:00:00"
@@ -44,13 +44,13 @@ public class VideoCallController: UIViewController {
         return label
     }()
     
-    let statusLabel: StatusLabel = {
+    public let statusLabel: StatusLabel = {
         let label = StatusLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    let bottomStackView: UIStackView = {
+    public let bottomStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .fillEqually
@@ -58,7 +58,7 @@ public class VideoCallController: UIViewController {
         return stack
     }()
     
-    let micButton: MicButton = {
+    public let micButton: MicButton = {
         let button = MicButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(ImageConstants.micUnmuted.getUIImage(), for: .normal)
@@ -66,31 +66,31 @@ public class VideoCallController: UIViewController {
         return button
     }()
     
-    let videoButton: VideoButton = {
+    public let videoButton: VideoButton = {
         let button = VideoButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    let screenShotButton: ScreenShotButton = {
+    public let screenShotButton: ScreenShotButton = {
         let button = ScreenShotButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    let cameraButton: CameraSwapButton = {
+    public let cameraButton: CameraSwapButton = {
         let button = CameraSwapButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    let endCallButton: CallEndButton = {
+    public let endCallButton: CallEndButton = {
         let button = CallEndButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    let docButton: DocButton = {
+    public let docButton: DocButton = {
         let button = DocButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -98,12 +98,12 @@ public class VideoCallController: UIViewController {
     
     let cellId = "subscriberCell"
 
-    var subscribers: [IndexPath: OTSubscriber] = [:]
-    var error: OTError?
+    public var subscribers: [IndexPath: OTSubscriber] = [:]
+    public var error: OTError?
 
-    var session: OTSession?
+    public var session: OTSession?
     
-    lazy var publisher: OTPublisher? = {
+    public lazy var publisher: OTPublisher? = {
         let settings = OTPublisherSettings()
         settings.name = UIDevice.current.name
         return OTPublisher(delegate: self, settings: settings)
@@ -198,29 +198,29 @@ public class VideoCallController: UIViewController {
         bottomStackView.heightAnchor.constraint(equalToConstant: actionViewHeight).isActive = true
     }
     
-    func addDocButton() {
+    public func addDocButton() {
         bottomStackView.addArrangedSubview(docButton)
     }
     
-    func addScreenshotButton() {
+    public func addScreenshotButton() {
         bottomStackView.addArrangedSubview(screenShotButton)
     }
     
-    func addCameraButton() {
+    public func addCameraButton() {
         bottomStackView.addArrangedSubview(cameraButton)
     }
     
-    func addVideoButton() {
+    public func addVideoButton() {
         bottomStackView.addArrangedSubview(videoButton)
     }
     
-    func addAudioButton() {
+    public func addAudioButton() {
         bottomStackView.addArrangedSubview(micButton)
     }
     
     // MARK: - Actions
     
-    func addButtonActions() {
+    public func addButtonActions() {
         
         self.micButton.addTarget(self, action: #selector(audioButtonAction), for: .touchUpInside)
         self.screenShotButton.addTarget(self, action: #selector(screenshotButtonAction), for: .touchUpInside)
@@ -229,17 +229,17 @@ public class VideoCallController: UIViewController {
         self.endCallButton.addTarget(self, action: #selector(endCallButtonAction), for: .touchUpInside)
     }
     
-    @objc func videoButtonAction() {
+    public @objc func videoButtonAction() {
         publisher?.publishVideo = !(publisher?.publishVideo ?? false)
         videoButton.isSelected = !videoButton.isSelected
     }
     
-    @objc func audioButtonAction() {
+    public @objc func audioButtonAction() {
         publisher?.publishAudio = !(publisher?.publishAudio ?? false)
         micButton.isSelected = !micButton.isSelected
     }
     
-    @objc func cameraButtonAction() {
+    public @objc func cameraButtonAction() {
         
         cameraButton.isSelected = !cameraButton.isSelected
         if publisher?.cameraPosition == .front {
@@ -249,11 +249,11 @@ public class VideoCallController: UIViewController {
         }
     }
     
-    @objc func endCallButtonAction() {
+    public @objc func endCallButtonAction() {
         session?.disconnect(&error)
     }
     
-    @objc func screenshotButtonAction() {
+    public @objc func screenshotButtonAction() {
         
         var screenshotImage: UIImage?
         let layer = UIApplication.shared.keyWindow?.layer
@@ -274,7 +274,7 @@ public class VideoCallController: UIViewController {
     // MARK: - Public Methods
     
     /* to show alert and flash effect when screenshot is taken */
-    func showFlashEffectAndAlert() {
+    public func showFlashEffectAndAlert() {
         
         if let wnd = self.view {
             let parent = UIView(frame: wnd.bounds)
