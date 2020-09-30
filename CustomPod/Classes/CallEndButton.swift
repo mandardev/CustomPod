@@ -18,12 +18,12 @@ public class CallEndButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         setup()
     }
 
-    func setup() {
+    public func setup() {
         self.setImage(ImageConstants.decline.getUIImage(), for: .normal)
     }
 }
