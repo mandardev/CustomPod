@@ -26,7 +26,11 @@ extension ImageConstants {
     func getUIImage() -> UIImage {
 //        UIImage.init(named: self.rawValue) ?? UIImage()
         let bundle = Bundle(for: VideoCallController.self)
-        return UIImage(named: self.rawValue, in: bundle, compatibleWith: nil) ?? UIImage()
+        let bundleURL = bundle.resourceURL?.appendingPathComponent("CustomPod.bundle")
+        let resourceBundle = Bundle(url: bundleURL!)
+        return UIImage(named: self.rawValue, in: resourceBundle, compatibleWith: nil) ?? UIImage()
+//        let bundle = Bundle(for: VideoCallController.self)
+//        return UIImage(named: self.rawValue, in: bundle, compatibleWith: nil) ?? UIImage()
     }
     
 }
