@@ -99,15 +99,15 @@ extension OUApiRouter {
         return HTTPHeaders
             .init(
                 [
-                    NetworkConstants.HttpHeaderField.acceptLanguage.rawValue: acceptLanguage,
-                    NetworkConstants.HttpHeaderField.authorization.rawValue: authorization,
-                    NetworkConstants.HttpHeaderField.deviceId.rawValue: deviceId,
-                    NetworkConstants.HttpHeaderField.deviceType.rawValue: deviceType,
-                    NetworkConstants.HttpHeaderField.deviceToken.rawValue: deviceType,
-                    NetworkConstants.HttpHeaderField.appVersion.rawValue: appVersion,
-                    NetworkConstants.HttpHeaderField.deviceIdTimestamp.rawValue: "", // TODO:- Set value for this header key and verify other header values.
-                    NetworkConstants.HttpHeaderField.timeZone.rawValue: "\(DateUtility.getTimeZoneOffset())",
-                    NetworkConstants.HttpHeaderField.contentType.rawValue: "application/json"
+                    OUNetworkConstants.HttpHeaderField.acceptLanguage.rawValue: acceptLanguage,
+                    OUNetworkConstants.HttpHeaderField.authorization.rawValue: authorization,
+                    OUNetworkConstants.HttpHeaderField.deviceId.rawValue: deviceId,
+                    OUNetworkConstants.HttpHeaderField.deviceType.rawValue: deviceType,
+                    OUNetworkConstants.HttpHeaderField.deviceToken.rawValue: deviceType,
+                    OUNetworkConstants.HttpHeaderField.appVersion.rawValue: appVersion,
+                    OUNetworkConstants.HttpHeaderField.deviceIdTimestamp.rawValue: "", // TODO:- Set value for this header key and verify other header values.
+                    OUNetworkConstants.HttpHeaderField.timeZone.rawValue: "\(DateUtility.getTimeZoneOffset())",
+                    OUNetworkConstants.HttpHeaderField.contentType.rawValue: "application/json"
                 ]
         )
     }

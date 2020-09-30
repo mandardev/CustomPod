@@ -1,5 +1,5 @@
 //
-//  ApiError.swift
+//  OUApiError.swift
 //  GoodCheckup-Doctor
 //
 //  Created by Mandar Choudhary on 24/09/20.

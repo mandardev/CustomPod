@@ -27,19 +27,19 @@ class OUApiClient {
                     if let dataObject = Mapper<T>().map(JSONObject: value) {
                         observer.onNext(dataObject)
                     } else {
-                        observer.onError(ApiError.formattingError)
+                        observer.onError(OUApiError.formattingError)
                     }
                 case .failure(let error):
                     //Something went wrong, switch on the status code and return the error
                     switch response.response?.statusCode {
                     case 403:
-                        observer.onError(ApiError.forbidden)
+                        observer.onError(OUApiError.forbidden)
                     case 404:
-                        observer.onError(ApiError.notFound)
+                        observer.onError(OUApiError.notFound)
                     case 409:
-                        observer.onError(ApiError.conflict)
+                        observer.onError(OUApiError.conflict)
                     case 500:
-                        observer.onError(ApiError.internalServerError)
+                        observer.onError(OUApiError.internalServerError)
                     default:
                         observer.onError(error)
                     }
