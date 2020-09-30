@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class VideoButton: UIButton {
+open class VideoButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -18,12 +18,12 @@ public class VideoButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setup()
     }
 
-    public func setup() {
+    open func setup() {
         self.setImage(OUImageConstants.videoUnmuted.getUIImage(), for: .normal)
         self.setImage(OUImageConstants.videoMuted.getUIImage(), for: .selected)
     }

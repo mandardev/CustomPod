@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class StatusLabel: UILabel {
+open class StatusLabel: UILabel {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -18,12 +18,12 @@ public class StatusLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setup()
     }
 
-    public func setup() {
+    open func setup() {
         self.isHidden = true
     }
 }

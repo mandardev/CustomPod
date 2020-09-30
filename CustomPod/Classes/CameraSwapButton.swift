@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CameraSwapButton: UIButton {
+open class CameraSwapButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -18,12 +18,12 @@ public class CameraSwapButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setup()
     }
 
-    public func setup() {
+    open func setup() {
         self.setImage(OUImageConstants.cameraFront.getUIImage(), for: .normal)
         self.setImage(OUImageConstants.cameraBack.getUIImage(), for: .selected)
     }

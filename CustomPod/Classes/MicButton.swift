@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MicButton: UIButton {
+open class MicButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -19,12 +19,12 @@ public class MicButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setup()
     }
 
-    public func setup() {
+    open func setup() {
         self.setImage(OUImageConstants.micUnmuted.getUIImage(), for: .normal)
         self.setImage(OUImageConstants.micMuted.getUIImage(), for: .selected)
     }

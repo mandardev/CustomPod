@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DocButton: UIButton {
+open class DocButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -18,12 +18,12 @@ public class DocButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setup()
     }
 
-    public func setup() {
+    open func setup() {
         self.setImage(OUImageConstants.docIcon.getUIImage(), for: .normal)
         self.isHidden = true
     }

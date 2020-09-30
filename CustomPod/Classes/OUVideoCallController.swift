@@ -11,7 +11,7 @@ import OpenTok
 
 let actionViewHeight: CGFloat = 80
 
-public class OUVideoCallController: UIViewController {
+open class OUVideoCallController: UIViewController {
     
     var apiKey: String?
     var sessionId: String?
@@ -19,7 +19,7 @@ public class OUVideoCallController: UIViewController {
     
     var collectionView: UICollectionView!
     
-    public let topStackView: UIStackView = {
+    open let topStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.distribution = .fillEqually
@@ -28,7 +28,7 @@ public class OUVideoCallController: UIViewController {
         return stack
     }()
     
-    public let userNameLabel: UILabel = {
+    open let userNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = UIDevice.current.name
@@ -36,7 +36,7 @@ public class OUVideoCallController: UIViewController {
         return label
     }()
     
-    public let timeLabel: UILabel = {
+    open let timeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "00:00:00"
@@ -44,13 +44,13 @@ public class OUVideoCallController: UIViewController {
         return label
     }()
     
-    public let statusLabel: StatusLabel = {
+    open let statusLabel: StatusLabel = {
         let label = StatusLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    public let bottomStackView: UIStackView = {
+    open let bottomStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.distribution = .fillEqually
@@ -58,7 +58,7 @@ public class OUVideoCallController: UIViewController {
         return stack
     }()
     
-    public let micButton: MicButton = {
+    open let micButton: MicButton = {
         let button = MicButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(OUImageConstants.micUnmuted.getUIImage(), for: .normal)
@@ -66,31 +66,31 @@ public class OUVideoCallController: UIViewController {
         return button
     }()
     
-    public let videoButton: VideoButton = {
+    open let videoButton: VideoButton = {
         let button = VideoButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    public let screenShotButton: ScreenShotButton = {
+    open let screenShotButton: ScreenShotButton = {
         let button = ScreenShotButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    public let cameraButton: CameraSwapButton = {
+    open let cameraButton: CameraSwapButton = {
         let button = CameraSwapButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    public let endCallButton: CallEndButton = {
+    open let endCallButton: CallEndButton = {
         let button = CallEndButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    public let docButton: DocButton = {
+    open let docButton: DocButton = {
         let button = DocButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -98,12 +98,12 @@ public class OUVideoCallController: UIViewController {
     
     let cellId = "subscriberCell"
 
-    public var subscribers: [IndexPath: OTSubscriber] = [:]
-    public var error: OTError?
+    open var subscribers: [IndexPath: OTSubscriber] = [:]
+    open var error: OTError?
 
-    public var session: OTSession?
+    open var session: OTSession?
     
-    public lazy var publisher: OTPublisher? = {
+    open lazy var publisher: OTPublisher? = {
         let settings = OTPublisherSettings()
         settings.name = UIDevice.current.name
         return OTPublisher(delegate: self, settings: settings)
@@ -113,7 +113,7 @@ public class OUVideoCallController: UIViewController {
         self.init(apiKey: nil, sessionId: nil, token: nil)
     }
 
-    public init(apiKey: String?, sessionId: String?, token: String?) {
+    open init(apiKey: String?, sessionId: String?, token: String?) {
         self.apiKey = apiKey
         self.sessionId = sessionId
         self.token = token
@@ -124,7 +124,7 @@ public class OUVideoCallController: UIViewController {
         super.init(coder: aDecoder)
     }
 
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         configureOTSession()
         addAndConfigureCollectionView()
@@ -142,11 +142,11 @@ public class OUVideoCallController: UIViewController {
         session?.connect(withToken: token ?? "", error: &error)
     }
     
-    public func configureOTSession() {
+    open func configureOTSession() {
         session = OTSession(apiKey: apiKey ?? "", sessionId: sessionId ?? "", delegate: self)
     }
     
-    public func addAndConfigureCollectionView() {
+    open func addAndConfigureCollectionView() {
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -165,7 +165,7 @@ public class OUVideoCallController: UIViewController {
         collectionView.backgroundColor = .black
     }
     
-    public func addTopStackView() {
+    open func addTopStackView() {
         
         self.view.addSubview(topStackView)
         topStackView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -174,22 +174,22 @@ public class OUVideoCallController: UIViewController {
         topStackView.heightAnchor.constraint(equalToConstant: actionViewHeight).isActive = true
     }
     
-    public func addUserNameLabel() {
+    open func addUserNameLabel() {
         topStackView.addArrangedSubview(userNameLabel)
     }
     
-    public func addTimeLabel() {
+    open func addTimeLabel() {
         topStackView.addArrangedSubview(timeLabel)
     }
     
-    public func addStatusLabel() {
+    open func addStatusLabel() {
         
         collectionView.addSubview(statusLabel)
         statusLabel.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
         statusLabel.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor).isActive = true
     }
     
-    public func addBottomStackView() {
+    open func addBottomStackView() {
         
         self.view.addSubview(bottomStackView)
         bottomStackView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
@@ -198,29 +198,29 @@ public class OUVideoCallController: UIViewController {
         bottomStackView.heightAnchor.constraint(equalToConstant: actionViewHeight).isActive = true
     }
     
-    public func addDocButton() {
+    open func addDocButton() {
         bottomStackView.addArrangedSubview(docButton)
     }
     
-    public func addScreenshotButton() {
+    open func addScreenshotButton() {
         bottomStackView.addArrangedSubview(screenShotButton)
     }
     
-    public func addCameraButton() {
+    open func addCameraButton() {
         bottomStackView.addArrangedSubview(cameraButton)
     }
     
-    public func addVideoButton() {
+    open func addVideoButton() {
         bottomStackView.addArrangedSubview(videoButton)
     }
     
-    public func addAudioButton() {
+    open func addAudioButton() {
         bottomStackView.addArrangedSubview(micButton)
     }
     
     // MARK: - Actions
     
-    public func addButtonActions() {
+    open func addButtonActions() {
         
         self.micButton.addTarget(self, action: #selector(audioButtonAction), for: .touchUpInside)
         self.screenShotButton.addTarget(self, action: #selector(screenshotButtonAction), for: .touchUpInside)
@@ -229,17 +229,17 @@ public class OUVideoCallController: UIViewController {
         self.endCallButton.addTarget(self, action: #selector(endCallButtonAction), for: .touchUpInside)
     }
     
-    @objc public func videoButtonAction() {
+    @objc open func videoButtonAction() {
         publisher?.publishVideo = !(publisher?.publishVideo ?? false)
         videoButton.isSelected = !videoButton.isSelected
     }
     
-    @objc public func audioButtonAction() {
+    @objc open func audioButtonAction() {
         publisher?.publishAudio = !(publisher?.publishAudio ?? false)
         micButton.isSelected = !micButton.isSelected
     }
     
-    @objc public func cameraButtonAction() {
+    @objc open func cameraButtonAction() {
         
         cameraButton.isSelected = !cameraButton.isSelected
         if publisher?.cameraPosition == .front {
@@ -249,11 +249,11 @@ public class OUVideoCallController: UIViewController {
         }
     }
     
-    @objc public func endCallButtonAction() {
+    @objc open func endCallButtonAction() {
         session?.disconnect(&error)
     }
     
-    @objc public func screenshotButtonAction() {
+    @objc open func screenshotButtonAction() {
         
         var screenshotImage: UIImage?
         let layer = UIApplication.shared.keyWindow?.layer
@@ -274,7 +274,7 @@ public class OUVideoCallController: UIViewController {
     // MARK: - Public Methods
     
     /* to show alert and flash effect when screenshot is taken */
-    public func showFlashEffectAndAlert() {
+    open func showFlashEffectAndAlert() {
         
         if let wnd = self.view {
             let parent = UIView(frame: wnd.bounds)
@@ -413,11 +413,11 @@ extension OUVideoCallController {
 
 extension OUVideoCallController: UICollectionViewDataSource {
     
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return subscribers.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? SubscriberCollectionViewCell
         cell?.subscriber = subscribers[indexPath]
         return cell ?? UICollectionViewCell()
@@ -431,12 +431,12 @@ extension OUVideoCallController: UICollectionViewDelegate {
 
 extension OUVideoCallController: OTSessionDelegate {
     
-    public func sessionDidConnect(_ session: OTSession) {
+    open func sessionDidConnect(_ session: OTSession) {
         print("Session connected")
         doPublish()
     }
     
-    public func sessionDidDisconnect(_ session: OTSession) {
+    open func sessionDidDisconnect(_ session: OTSession) {
         print("Session disconnected")
         subscribers.removeAll()
         reloadCollectionView()
@@ -444,7 +444,7 @@ extension OUVideoCallController: OTSessionDelegate {
         self.view.removeFromSuperview()
     }
     
-    public func session(_ session: OTSession, streamCreated stream: OTStream) {
+    open func session(_ session: OTSession, streamCreated stream: OTStream) {
         print("Session streamCreated: \(stream.streamId)")
         if subscribers.count == 4 {
             print("Sorry this sample only supports up to 4 subscribers :)")
@@ -453,7 +453,7 @@ extension OUVideoCallController: OTSessionDelegate {
         doSubscribe(to: stream)
     }
     
-    public func session(_ session: OTSession, streamDestroyed stream: OTStream) {
+    open func session(_ session: OTSession, streamDestroyed stream: OTStream) {
         print("Session streamDestroyed: \(stream.streamId)")
         
         guard let (index, subscriber) = findSubscriber(byStreamId: stream.streamId) else {
@@ -464,7 +464,7 @@ extension OUVideoCallController: OTSessionDelegate {
         reloadCollectionView()
     }
     
-    public func session(_ session: OTSession, didFailWithError error: OTError) {
+    open func session(_ session: OTSession, didFailWithError error: OTError) {
         print("session Failed to connect: \(error.localizedDescription)")
     }
 }
@@ -473,13 +473,13 @@ extension OUVideoCallController: OTSessionDelegate {
 
 extension OUVideoCallController: OTPublisherDelegate {
     
-    public func publisher(_ publisher: OTPublisherKit, streamCreated stream: OTStream) {
+    open func publisher(_ publisher: OTPublisherKit, streamCreated stream: OTStream) {
     }
         
-    public func publisher(_ publisher: OTPublisherKit, streamDestroyed stream: OTStream) {
+    open func publisher(_ publisher: OTPublisherKit, streamDestroyed stream: OTStream) {
     }
     
-    public func publisher(_ publisher: OTPublisherKit, didFailWithError error: OTError) {
+    open func publisher(_ publisher: OTPublisherKit, didFailWithError error: OTError) {
         print("Publisher failed: \(error.localizedDescription)")
     }
 }
@@ -488,12 +488,12 @@ extension OUVideoCallController: OTPublisherDelegate {
 
 extension OUVideoCallController: OTSubscriberDelegate {
     
-    public func subscriberDidConnect(toStream subscriberKit: OTSubscriberKit) {
+    open func subscriberDidConnect(toStream subscriberKit: OTSubscriberKit) {
         print("Subscriber connected")
         reloadCollectionView()
     }
     
-    public func subscriberVideoEnabled(_ subscriber: OTSubscriberKit, reason: OTSubscriberVideoEventReason) {
+    open func subscriberVideoEnabled(_ subscriber: OTSubscriberKit, reason: OTSubscriberVideoEventReason) {
         
         statusLabel.text = "turned camera on"
         statusLabel.isHidden = false
@@ -502,7 +502,7 @@ extension OUVideoCallController: OTSubscriberDelegate {
         }
     }
         
-    public func subscriberVideoDisabled(_ subscriber: OTSubscriberKit, reason: OTSubscriberVideoEventReason) {
+    open func subscriberVideoDisabled(_ subscriber: OTSubscriberKit, reason: OTSubscriberVideoEventReason) {
         
         statusLabel.text = "turned camera off"
         statusLabel.isHidden = false
@@ -511,7 +511,7 @@ extension OUVideoCallController: OTSubscriberDelegate {
         }
     }
         
-    public func subscriber(_ subscriber: OTSubscriberKit, didFailWithError error: OTError) {
+    open func subscriber(_ subscriber: OTSubscriberKit, didFailWithError error: OTError) {
         print("Subscriber failed: \(error.localizedDescription)")
     }
 
