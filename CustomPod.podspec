@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'CustomPod/Classes/**/*'
   
+  s.static_framework = true
+  
   s.dependency 'OpenTok'
   s.dependency 'Alamofire', '~> 5.2' #, :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
   s.dependency 'RxSwift', '~> 5.1.1'
