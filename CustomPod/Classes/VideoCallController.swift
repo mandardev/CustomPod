@@ -229,17 +229,17 @@ public class VideoCallController: UIViewController {
         self.endCallButton.addTarget(self, action: #selector(endCallButtonAction), for: .touchUpInside)
     }
     
-    public @objc func videoButtonAction() {
+    @objc public func videoButtonAction() {
         publisher?.publishVideo = !(publisher?.publishVideo ?? false)
         videoButton.isSelected = !videoButton.isSelected
     }
     
-    public @objc func audioButtonAction() {
+    @objc public func audioButtonAction() {
         publisher?.publishAudio = !(publisher?.publishAudio ?? false)
         micButton.isSelected = !micButton.isSelected
     }
     
-    public @objc func cameraButtonAction() {
+    @objc public func cameraButtonAction() {
         
         cameraButton.isSelected = !cameraButton.isSelected
         if publisher?.cameraPosition == .front {
@@ -249,11 +249,11 @@ public class VideoCallController: UIViewController {
         }
     }
     
-    public @objc func endCallButtonAction() {
+    @objc public func endCallButtonAction() {
         session?.disconnect(&error)
     }
     
-    public @objc func screenshotButtonAction() {
+    @objc public func screenshotButtonAction() {
         
         var screenshotImage: UIImage?
         let layer = UIApplication.shared.keyWindow?.layer
