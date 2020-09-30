@@ -1,5 +1,5 @@
 //
-//  ApiRouter.swift
+//  OUApiRouter.swift
 //  GoodCheckup-Doctor
 //
 //  Created by Mandar Choudhary on 22/09/20.
@@ -106,7 +106,7 @@ extension OUApiRouter {
                     OUNetworkConstants.HttpHeaderField.deviceToken.rawValue: deviceType,
                     OUNetworkConstants.HttpHeaderField.appVersion.rawValue: appVersion,
                     OUNetworkConstants.HttpHeaderField.deviceIdTimestamp.rawValue: "", // TODO:- Set value for this header key and verify other header values.
-                    OUNetworkConstants.HttpHeaderField.timeZone.rawValue: "\(DateUtility.getTimeZoneOffset())",
+                    OUNetworkConstants.HttpHeaderField.timeZone.rawValue: "\(OUDateUtility.getTimeZoneOffset())",
                     OUNetworkConstants.HttpHeaderField.contentType.rawValue: "application/json"
                 ]
         )

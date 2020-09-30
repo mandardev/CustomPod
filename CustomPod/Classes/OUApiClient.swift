@@ -58,14 +58,14 @@ class OUApiClient {
 extension OUApiClient {
 
     static func videoCallInitiate(videoCallRequest: VideoCallInitiateRequest) -> Observable<VideoCallInitiateModel> {
-        return request(ApiRouter.videoCallInitiate(videoCallRequest))
+        return request(OUApiRouter.videoCallInitiate(videoCallRequest))
     }
     
     static func videoCallEnd(videoCallEndRequest: VideoCallEndRequest) -> Observable<VideoCallEndModel> {
-        return request(ApiRouter.videoCallEnd(videoCallEndRequest))
+        return request(OUApiRouter.videoCallEnd(videoCallEndRequest))
     }
     
     static func videoCallCancel(videoCallCancelRequest: VideoCallCancelRequest) -> Observable<VideoCallCancelModel> {
-        return request(ApiRouter.videoCallCancel(videoCallCancelRequest))
+        return request(OUApiRouter.videoCallCancel(videoCallCancelRequest))
     }
 }
