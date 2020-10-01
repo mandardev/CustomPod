@@ -12,9 +12,9 @@ struct OUNetworkConstants {
 
     // All API's base URL
     #if PROD
-        static var baseUrl = "http://ec2-54-89-108-138.compute-1.amazonaws.com:8086" // TODO:- Update PROD url.
+        static var baseUrl = "" // TODO:- Update PROD url.
     #else
-        static var baseUrl = "http://ec2-54-89-108-138.compute-1.amazonaws.com:8086"
+        static var baseUrl = ""
     #endif
     
     //The header fields
@@ -37,8 +37,8 @@ struct OUNetworkConstants {
     }
     
     enum AWS: String {
-        case bucketName = "goodcheckup-dev"
-        case key = "pk_test_EYZs05JHWzssFt2KZzjtsNaR00AdKU99rt"
+        case bucketName = ""
+        case key = ""
     }
 }
 
